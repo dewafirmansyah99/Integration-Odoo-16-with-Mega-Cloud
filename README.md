@@ -102,6 +102,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![JQuery][JQuery.com]][JQuery-url]
 * [![Python][Python]][Python-url]
+* [![Odoo][Odoo]][Odoo-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -248,3 +249,5 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [JQuery-url]: https://jquery.com 
 [Python]: https://img.shields.io/badge/Python-3.9-3776AB.svg?style=for-the-badge&logo=python&logoColor=white
 [Python-url]: https://www.python.org
+[Odoo]: https://img.shields.io/badge/Odoo-16.0-714B67.svg?style=for-the-badge&logo=odoo&logoColor=#714b67
+[Odoo-url]: https://www.odoo.com
