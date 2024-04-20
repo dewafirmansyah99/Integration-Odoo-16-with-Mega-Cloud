@@ -18,35 +18,36 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
+
+<!-- [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+[![LinkedIn][linkedin-shield]][linkedin-url] -->
 
 
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/dewafirmansyah99/Integration-Odoo-16-with-Mega-Cloud">
+    <img src="odoo_cloud_mega/static/description/icon.png" alt="Logo" width="100" height="100">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Odoo v16 Module | Applying the CRUD Concept to MEGA with Odoo v16</h3>
 
   <p align="center">
-    project_description
+    CRUD in MEGA from Odoo v16
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://drive.google.com/file/d/1n34XJbwnjVisVWZAC5u8MhbRCfOpxktK/view?usp=sharing"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://github.com/odwyersoftware/mega.py">View Cloud Mega API Repo</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/odoo/odoo/tree/16.0">View Odoo v16 Repo</a>
+    <!-- · -->
+    <!-- <a href="https://github.com/github_username/repo_name/issues">Request Feature</a> -->
   </p>
 </div>
 
@@ -65,16 +66,16 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
+        <!-- <li><a href="#prerequisites">Prerequisites</a></li> -->
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
+    <!-- <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li> -->
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <!-- <li><a href="#acknowledgments">Acknowledgments</a></li> -->
   </ol>
 </details>
 
@@ -83,9 +84,23 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<div align="center">
+    <img src="odoo_cloud_mega/static/description/img/icon.jpg" alt="Logo" width="480" height="270">
+</div>
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+<div align="left">
+    <h3>What can this module do? This module can apply the CRUD concept (Create, Read, Update, Delete) to the Mega Cloud. Which is:
+    </h3>
+    <ol>
+        <li>Gets the entire file, so that files can be downloaded or deleted</li>
+        <li>Add or upload new files to a folder</li>
+        <li>Read existing folder names</li>
+        <li>Renaming folder</li>
+        <li>Add a new folder</li>
+        <li>Remove folder</li>
+        <li>Erase data on the trash</li>
+    </ol>
+</div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -93,16 +108,17 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
-* [![Next][Next.js]][Next-url]
+<!-- * [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
 * [![Vue][Vue.js]][Vue-url]
 * [![Angular][Angular.io]][Angular-url]
 * [![Svelte][Svelte.dev]][Svelte-url]
 * [![Laravel][Laravel.com]][Laravel-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* [![JQuery][JQuery.com]][JQuery-url] -->
 * [![Python][Python]][Python-url]
 * [![Odoo][Odoo]][Odoo-url]
+* [![Mega][Mega]][Mega-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -111,32 +127,51 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+<div align="left">
+    <h3>What do you need to run this module?
+    </h3>
+    <ol>
+        <li>Odoo v16</li>
+        <li>Python 3.9</li>
+    </ol>
+</div>
 
-### Prerequisites
+
+<!-- ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
 * npm
   ```sh
   npm install npm@latest -g
-  ```
+  ``` -->
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+<!-- 1. <h3><strong>Install mega.py package</strong></h3>
+    Run the following command, or run setup from the latest github source.<br/>
+    ```sh
+    pip install mega.py
+    ```
+
+2. <h3><strong>Install humanize package</strong></h3>
+    ```sh
+    pip install humanize
+    ``` -->
+
+
+1. Install Odoo v16 [Setup instructions](https://www.odoo.com/documentation/16.0/administration/install/install.html)
+2. Install mega.py package
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   pip install mega.py
    ```
-3. Install NPM packages
+3. Install humanize package
    ```sh
-   npm install
+   pip install humanize
    ```
-4. Enter your API in `config.js`
+<!-- 4. Enter your API in `config.js`
    ```js
    const API_KEY = 'ENTER YOUR API';
-   ```
+   ``` -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -145,16 +180,39 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+<div align="left">
+    <h3>Create a Mega account</h3>
+    First, <a href="https://mega.io">create an account with Mega</a>.
+</div>
+<div align="left">
+    <h3>Addons Directory</h3>
+    Download this module or Clone this repo and place the module inside Addons folder Odoo v16
+</div>
+<div align="left">
+    <h3>Login Odoo</h3>
+    Login Odoo in your localhost or server with admin account
+</div>
+<div align="left">
+    <h3>Installing Module</h3>
+    Go to Apps Menu >> Install odoo_cloud_mega Module
+</div>
+<div align="left">
+    <h3>Getting External API Odoo</h3>
+    Check in, <a href="https://www.odoo.com/documentation/16.0/developer/reference/external_api.html">here</a>.
+</div>
+<div align="left">
+    <h3>Reading the continue instructions</h3>
+    Check in, <a href="https://drive.google.com/file/d/1n34XJbwnjVisVWZAC5u8MhbRCfOpxktK/view?usp=sharing">here</a>.
+</div>
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+<!-- _For more examples, please refer to the [Documentation](https://example.com)_ -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- ROADMAP -->
-## Roadmap
+<!-- ## Roadmap
 
 - [ ] Feature 1
 - [ ] Feature 2
@@ -163,12 +221,12 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 
 
 <!-- CONTRIBUTING -->
-## Contributing
+<!-- ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -181,14 +239,14 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 
 
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the GNU License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -197,22 +255,23 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Dewa Firmansyah - firmansyahdewa702@gmail.com
+<!-- Dewa Firmansyah - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com -->
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/dewafirmansyah99](https://github.com/dewafirmansyah99)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
+<!-- ## Acknowledgments
 
 * []()
 * []()
 * []()
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 
 
@@ -251,3 +310,5 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [Python-url]: https://www.python.org
 [Odoo]: https://img.shields.io/badge/Odoo-16.0-714B67.svg?style=for-the-badge&logo=odoo&logoColor=#714b67
 [Odoo-url]: https://www.odoo.com
+[Mega]: https://img.shields.io/badge/build-api-salmon?style=for-the-badge&logo=mega&logoColor=%23D9272E&label=mega
+[Mega-url]: https://github.com/odwyersoftware/mega.py
