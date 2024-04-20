@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_check_files_user,odoo_cloud_mega.check.files,model_check_files,base.group_user,1,1,1,1
+access_check_line_user,odoo_cloud_mega.check.line,model_check_line,base.group_user,1,1,1,1
+access_folder_name_user,odoo_cloud_mega.folder.name,model_folder_name,base.group_user,1,1,1,1
+access_folder_setting_user,odoo_cloud_mega.folder.setting,model_folder_setting,base.group_user,1,1,1,1
+access_folder_setting_line_user,odoo_cloud_mega.folder.setting.line,model_folder_setting_line,base.group_user,1,1,1,1
+access_login_user_user,odoo_cloud_mega.login.user,model_login_user,base.group_user,1,1,1,1
+access_upload_file_user,odoo_cloud_mega.upload.file,model_upload_file,base.group_user,1,1,1,1
+access_upload_line_user,odoo_cloud_mega.upload.line,model_upload_line,base.group_user,1,1,1,1

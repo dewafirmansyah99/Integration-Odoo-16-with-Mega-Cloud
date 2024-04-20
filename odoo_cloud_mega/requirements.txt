@@ -1,0 +1,4 @@
+humanize==4.6.0
+mega.py==1.0.8
+pathlib==1.0.1
+

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="login_username_action" model="ir.actions.act_window">
+        <field name="name">User Account Setting</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">login.user</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+            No User Account found. Let's create one!
+            </p><p>
+            This module has been integrated with the API from the https://mega.io/ website. 
+            </p>
+        </field>
+    </record>
+
+
+    <record id="user_account_form" model="ir.ui.view">
+        <field name="name">user.account.form</field>
+        <field name="model">login.user</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="state" widget="statusbar"/>
+                    <button string="Login" name="action_login" type="object" class="oe_highlight" attrs="{'invisible': [('state', '!=', 'not_active')]}"/>
+                    <button string="Refresh" name="action_login" type="object" class="oe_highlight" attrs="{'invisible': [('state', '!=', 'active')]}"/>
+                    <button string="SCAN FOLDER" name="scan_folder" type="object" class="oe_highlight" attrs="{'invisible': [('state', '!=', 'active')]}"/>
+                    <button string="empty trash" name="action_empty_trash" type="object" class="oe_highlight" attrs="{'invisible': [('state', '!=', 'active')]}"/>
+                    <button string="LOGOUT" name="action_logout" type="object" class="btn-danger" attrs="{'invisible': [('state', '!=', 'active')]}"/>
+                    <!-- <button string="ALERT" name="action_alert" type="object" class="btn-classic"/> -->
+                </header>
+                <sheet>
+                    <group col="1">
+                        <group string="Login Account">
+                            <field name="email"/>
+                            <field name="password" password="True"/>
+                        </group>
+                    </group>
+                    <group col="2">
+                        <group string="Account Information">
+                            <field name="username" readonly="1"/>
+                            <field name="last_login" readonly="1"/>
+                        </group>
+                        <group string="Storage Information">
+                            <field name="total_file" readonly="1"/>
+                            <field name="total_folder" readonly="1"/>
+                            <field name="used_storage" readonly="1"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="user_account_view_tree" model="ir.ui.view">
+        <field name="name">user.account.view.tree</field>
+        <field name="model">login.user</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="email"/>
+            </tree>
+        </field>
+    </record>
+
+    <menuitem action="login_username_action" id="menu_login_settings" parent="odoo_cloud_mega.menu_check_files" sequence='1'/>
+</odoo>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="check_files_action" model="ir.actions.act_window">
+        <field name="name">Read Files</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">check.files</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+            No Files found. Let's Check!
+            </p><p>
+            This module has been integrated with the API from the https://mega.io/ website. 
+            </p>
+        </field>
+    </record>
+
+    <menuitem name='Mega' action="check_files_action" id="menu_check_files" web_icon="odoo_cloud_mega,static/description/icon.png"/>
+    <menuitem action="check_files_action" id="menu_read_files" parent="odoo_cloud_mega.menu_check_files" sequence='2'/>
+
+    <record id="check_files_form" model="ir.ui.view">
+        <field name="name">check.files.form</field>
+        <field name="model">check.files</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button string="GET FILE" name="action_get_file" type="object" class="oe_highlight"/>
+                </header>
+                <sheet>
+                    <group col="1">
+                        <field name="name" invisible="1"/>
+                        <field name="account_id" domain="[('state', '=', 'active')]"/>
+                        <field name="download_file" invisible="1"/>
+                    </group>
+                    <notebook>
+                      <page string="Files">
+                        <field name="check_line">
+                          <tree editable="bottom">
+                            <field name="number"/>
+                            <field name="name"/>
+                            <field name="size"/>
+                            <field name="size_of_byte" invisible="1"/>
+                            <field name="last_modified"/>
+                            <field name="download_file" widget="binary" filename="filename"/>
+                            <field name="filename" invisible="1"/>
+                            <button string="DELETE" name="delete_line" type="object" class="oe_highlight"/>
+                          </tree>
+                        </field>
+                      </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="check_files_view_tree" model="ir.ui.view">
+        <field name="name">check.files.view.tree</field>
+        <field name="model">check.files</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="account_id"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="folder_name_action" model="ir.actions.act_window">
+        <field name="name">Folder</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">folder.name</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+            No Folder found. Let's create one!
+            </p><p>
+            This module has been integrated with the API from the https://mega.io/ website. 
+            </p>
+        </field>
+    </record>
+
+
+    <record id="folder_name_form" model="ir.ui.view">
+        <field name="name">folder.name.form</field>
+        <field name="model">folder.name</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group col="2">
+                        <group string="Folder Information">
+                            <field name="name"/>
+                            <field name="total_file" readonly="1"/>
+                            <field name="account_id" attrs="{'invisible': [('is_created_folder', '=', True)]}"/>
+                            <field name="is_created_folder" invisible='1'/>
+                        </group>
+                        <group string="Rename Folder">
+                            <field name="renamed_folder_name"/>
+                            <button string="Rename" name="action_rename" type="object" class="oe_highlight"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="folder_name_view_tree" model="ir.ui.view">
+        <field name="name">folder.name.view.tree</field>
+        <field name="model">folder.name</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="total_file"/>
+            </tree>
+        </field>
+    </record>
+
+    <menuitem action="folder_name_action" id="menu_folder" parent="odoo_cloud_mega.menu_check_files" sequence='4'/>
+
+    <record id="action_wizard_folder_setting_view" model="ir.actions.act_window">
+        <field name="name">Folder Settings</field>
+        <field name="res_model">folder.setting</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_view_types">form</field>
+    </record>
+
+    <record id="folder_setting_wizard_view" model="ir.ui.view">
+        <field name="name">folder.setting.wizard.view</field>
+        <field name="model">folder.setting</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Folder Settings">
+                <sheet>
+                    <group>
+                        <field name="account_id"/>
+                        <field name="category" widget='radio' options="{'horizontal': true}"/>
+                    </group>
+                    <notebook>
+                      <page string="Add and Delete Folder">
+                        <field name="folder_setting_line">
+                          <tree editable="bottom">
+                            <field name="folder_id" attrs="{'column_invisible': [('parent.category', '=', 'add')]}"/>
+                            <field name="name" attrs="{'column_invisible': [('parent.category', '=', 'delete')]}"/>
+                            <field name="total_file" attrs="{'column_invisible': [('parent.category', '=', 'add')]}"/>
+                          </tree>
+                        </field>
+                      </page>
+                    </notebook>
+                </sheet>
+                <footer>
+                    <button name="action_add_folder" string="Add" type="object" class="btn-primary" attrs="{'invisible': [('category', '=', 'delete')]}"/>
+                    <button name="action_delete_folder" string="Delete" type="object" class="btn-primary" attrs="{'invisible': [('category', '=', 'add')]}"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <menuitem action="action_wizard_folder_setting_view" id="menu_folder_settings" parent="odoo_cloud_mega.menu_check_files" sequence='5'/>
+
+</odoo>

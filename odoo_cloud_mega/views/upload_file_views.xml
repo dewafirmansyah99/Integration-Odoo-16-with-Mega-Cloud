@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_wizard_form_upload_view" model="ir.actions.act_window">
+        <field name="name">Upload Files</field>
+        <field name="res_model">upload.file</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_view_types">form</field>
+    </record>
+
+    <record id="form_upload_wizard_view" model="ir.ui.view">
+        <field name="name">form.upload.wizard.view</field>
+        <field name="model">upload.file</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="From Upload">
+                <sheet>
+                    <group>
+                        <field name="account_id"/>
+                        <field name="folder_id"/>
+                    </group>
+                    <notebook>
+                      <page string="Upload File">
+                        <field name="upload_line">
+                          <tree editable="bottom">
+                            <field name="upload_file" filename="filename"/>
+                            <field name="filename" invisible="1"/>
+                          </tree>
+                        </field>
+                      </page>
+                    </notebook>
+                </sheet>
+                <footer>
+                    <button name="action_confirm_upload" string="Upload" type="object" class="btn-primary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <menuitem action="action_wizard_form_upload_view" id="menu_upload_files" parent="odoo_cloud_mega.menu_check_files" sequence='3'/>
+
+</odoo>
